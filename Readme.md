@@ -16,3 +16,19 @@ To run the project, you need to run the following command:
 python main.py
 ```
 ---
+To train the model, you need to run the following steps:
+1. Download the pretrained weight from [here](https://drive.google.com/drive/folders/10EuvYr2NM3NsNZVjfpdiw_TUzRUyayzb?usp=share_link)
+2. Copy and paste the weight to the project folder './YOLO/yolov5/weight'
+3. Run the following command:
+```bash
+cd YOLO/yolov5
+python train.py --img 416 --batch 16 --epochs 150 --data {dataset.location}/data.yaml --weights {weight.name}.pt --cache
+```
+for example:
+```bash
+python train.py --img 640 --batch 20 --epochs 200 --data custom_data.yaml --weights best.pt --cache
+```
+---
+If you have any questions, please contact me via email: [duypnt23@gmail.com](mailto: duypnt23@gmail.com)
+
+Thanks for reading!
