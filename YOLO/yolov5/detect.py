@@ -260,7 +260,7 @@ def start_detect(opt):
 
 
 def start_detect_v2():
-    run(weights=ROOT / './weight/best_v1.pt',
+    run(weights=ROOT / './weight/invoice_weight.pt',
         source=ROOT / './data/images',
         save_crop=True,
         conf_thres=0.25,

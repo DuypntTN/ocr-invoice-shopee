@@ -56,7 +56,7 @@ class OCR:
         return self.ListItemToOCR
 
     def runOCR(self) -> dict:
-        pytesseract.pytesseract.tesseract_cmd = r'D:\ComputerVision\Tesseract_Root\tesseract.exe'
+        pytesseract.pytesseract.tesseract_cmd = r'D:\#Research\ComputerVision\Tesseract_Root\tesseract.exe' ## path to tesseract.exe
         """
         Run OCR on all images in ListItemToOCR
 
@@ -112,7 +112,6 @@ class OCR:
                 val = ob_item.__dict__
             ).__dict__)
         ## save as json
-        print(self.output_obj)
         with open('output.json', 'w', encoding='utf-8') as f:
             json.dump(self.output_obj, f, ensure_ascii=False, indent=4)
             
